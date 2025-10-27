@@ -21,7 +21,7 @@ db.sequelize.sync()
         console.log(err);
     })
 
-    app.post("/komik", async (requestAnimationFrame, res) => {
+    app.post("/komik", async (req, res) => {
         const data = req.body;
         try {
             const komik = await db.Komik.create(data);
